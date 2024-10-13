@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+  <alumno>
+    <id>1</id>
+    <nombre>hugo</nombre>
+    <carrera>Computacion</carrera>
+    <promedio>8.5</promedio>
+    <edad>22</edad>
+  </alumno>
+  <alumno>
+    <id>2</id>
+    <nombre>hugo</nombre>
+    <carrera>Computacion</carrera>
+    <promedio>8.5</promedio>
+    <edad>23</edad>
+  </alumno>
+  <alumno>
+    <id>3</id>
+    <nombre>Marlem</nombre>
+    <carrera>Computacion</carrera>
+    <promedio>8.5</promedio>
+    <edad>23</edad>
+  </alumno>
+</alumnos>
