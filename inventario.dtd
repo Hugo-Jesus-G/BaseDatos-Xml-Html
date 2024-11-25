@@ -1,0 +1,8 @@
+<!ELEMENT Inventario (Productos)>
+
+<!ELEMENT Productos (Producto+)>
+<!ELEMENT Producto (ID, Nombre, Precio, Stock)>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Precio (#PCDATA)>
+<!ELEMENT Stock (#PCDATA)>

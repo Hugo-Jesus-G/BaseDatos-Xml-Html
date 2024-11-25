@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Inventario>
+  <Productos>
+    <Producto>
+      <ID>4</ID>
+      <Nombre>celular</Nombre>
+      <Precio>2000</Precio>
+      <Stock>3</Stock>
+    </Producto>
+  </Productos>
+</Inventario>

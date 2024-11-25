@@ -3,7 +3,7 @@
 
 $contraseña="";
 $usuario="root";
-$nombrebd="alumnos";
+$nombrebd="Inventario";
 $host="localhost";
 
 $conexion=mysqli_connect($host,$usuario,$contraseña,$nombrebd);

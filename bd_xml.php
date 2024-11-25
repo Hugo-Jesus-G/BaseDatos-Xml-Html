@@ -1,59 +1,46 @@
 <?php
 
-
-include 'conexion.php';
-
-if ($conexion->connect_error) {
-
-    die("Error en la conexion: " . $conexion->connect_error);
-}
-
-
-
-
-
-function crearXml($conexion )
+function crearXml($conexion)
 {
-
-
-    $query = "SELECT * FROM alumnos";
+    $query = "SELECT * FROM productos";
     $consulta = $conexion->query($query);
 
     $docXml = new DOMDocument("1.0", "UTF-8");
 
     $docXml->formatOutput = true;
 
-    $usuarios = $docXml->createElement("alumnos");
+    $inventario = $docXml->createElement("Inventario");
+    $docXml->appendChild($inventario);
 
-    $docXml->appendChild($usuarios);
+    $productos = $docXml->createElement("Productos");
+    $inventario->appendChild($productos);
 
     if ($consulta->num_rows > 0) {
         while ($row = $consulta->fetch_assoc()) {
-            $usuario = $docXml->createElement("alumno");
+            $producto = $docXml->createElement("Producto");
 
-            $id = $docXml->createElement("id", $row["id"]);
-            $usuario->appendChild($id);
+            $id = $docXml->createElement("ID", $row["id_producto"]);
+            $producto->appendChild($id);
 
-            $nombre = $docXml->createElement("nombre", $row["nombre"]);
-            $usuario->appendChild($nombre);
+            $nombre = $docXml->createElement("Nombre", $row["nombre"]);
+            $producto->appendChild($nombre);
 
-            $carrera = $docXml->createElement("carrera", $row["carrera"]);
-            $usuario->appendChild($carrera);
+            $precio = $docXml->createElement("Precio", $row["precio"]);
+            $producto->appendChild($precio);
 
+            $stock = $docXml->createElement("Stock", $row["stock"]);
+            $producto->appendChild($stock);
 
-            $promedio = $docXml->createElement("promedio", $row["promedio"]);
-            $usuario->appendChild($promedio);
-
-            $edad = $docXml->createElement("edad", $row["edad"]);
-            $usuario->appendChild($edad);
-
-            $usuarios->appendChild($usuario);
+            $productos->appendChild($producto);
         }
 
 
-        $xmlFilePath = 'alumnos.xml';
+        $xmlFilePath = 'productos.xml';
         $docXml->save($xmlFilePath);
     } else {
-        echo "No se encontraron usuarios.";
+
+
+        $xmlFilePath = 'productos.xml';
+        $docXml->save($xmlFilePath);
     }
 }
