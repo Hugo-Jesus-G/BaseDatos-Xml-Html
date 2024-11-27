@@ -24,7 +24,7 @@ function leerXml($file)
         echo "<tr>";
         echo "<td>" . $producto->ID . "</td>";
         echo "<td>" . $producto->Nombre . "</td>";
-        echo "<td>" . $producto->Precio . "</td>";
+        echo "<td>$" . $producto->Precio . "</td>";
         echo "<td>" . $producto->Stock . "</td>";
         echo "<td><a href='controlador.php?id=" . $producto->ID . "' class='btn btn-danger'>Eliminar</a></td>";
         echo "<td><a href='actualizar.php?id={$producto->ID}'class='btn btn-primary'>Actualizar</a></td>";

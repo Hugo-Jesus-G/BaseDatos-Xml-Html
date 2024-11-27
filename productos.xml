@@ -7,5 +7,17 @@
       <Precio>2000</Precio>
       <Stock>3</Stock>
     </Producto>
+    <Producto>
+      <ID>6</ID>
+      <Nombre>Television</Nombre>
+      <Precio>3000</Precio>
+      <Stock>4</Stock>
+    </Producto>
+    <Producto>
+      <ID>8</ID>
+      <Nombre>Tablet</Nombre>
+      <Precio>500</Precio>
+      <Stock>3</Stock>
+    </Producto>
   </Productos>
 </Inventario>

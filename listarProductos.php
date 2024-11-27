@@ -9,7 +9,16 @@
 
 <body>
     <h1> Productos</h1>
-    <input class="btn btn-success mx-1" type="button" value="Ingresar nuevo Producto" onclick="mostrarFormulario()">
+
+
+    <div class="container my-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <input class="btn btn-success" type="button" value="Ingresar nuevo Producto" onclick="mostrarFormularionuevo()">
+    
+    <button class="btn btn-warning" onclick="generatePDF('productos.xml')">Imprimir Reporte</button>
+  </div>
+</div>
+
     <br>
     <?php
     require_once 'lecturaXml.php';
@@ -30,8 +39,10 @@
 
 
 
-<input class="btn btn-warning mx-2" type="button" value="Imprimir Reporte" >
 
+
+  
+  
 
 
 
@@ -46,6 +57,8 @@
 <script src="reporte.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
 
 
 </html>
